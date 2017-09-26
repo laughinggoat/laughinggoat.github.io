@@ -1,1 +1,84 @@
-hello
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <header class="site-header">
+
+    <div class="wrap title-wrap">
+      <a class="site-title" href="/">Mountain Project Tick Data</a>
+    </div>
+  </header>
+
+
+      <div class="page-content">
+        <div class="wrap">
+        <div class="post">
+<br>
+The following charts are fun visualizations of mountain project tick data. I'd love feedback on these, or suggestions for other things to analyze.
+<br><br>
+<p><b>Note 1</b>: I obtained this information for my personal interest by scraping the site. I did what I could not to make excessive requests, have no interest in using it as my own. I'd love to hear if anyone thinks this is inappropriate.</p>
+<br>
+<p><b>Note 2</b>: while mp users are legion, only just under 20,000 have both ticks and demographic info. 14,086 identify as male, 2819 as female. So the gender graphs should be taken with some grains of salt.
+
+<br>
+<br>
+<ul>
+  <li><a href="average_by_age">Average Tick Grade by Age.</a></li>
+    <li><a href="users_age">Number of Users by Age.</li>
+  <li><a href="average_by_state">Average Tick Grade by State.</a></li>
+  <li><a href="gender_state">Gender and Average Tick Grade by State.</li>
+  <li><a href="#hist">Histogram of Average Tick Grade by Gender</a></li>
+
+  <li><a href="#hmap">Heatmap of the Most Popular climbing areas.</a></li>
+</ul>
+</div>
+<br>
+<h3><a name="average_by_age"></a>Average Tick Grade by Age.</h3>
+
+<div class="fig figcenter fighighlight">
+  <img src="grade_age.png", width="100%">
+</div>
+
+<h3><a name="average_by_state"></a>Average Tick Grade by State.</h3>
+
+
+<div class="fig">
+  <img src="grade_state.png">
+</div>
+
+<h3><a name="average_by_state"></a>Average Tick Grade by State.</h3>
+
+
+<div class="users_age">
+  <img src="users_age.png">
+</div>
+
+<h3><a name="hist"></a>Histogram of Average Tick Grade by Gender.</h3>
+
+<div class="fig figcenter fighighlight">
+  <img src="histogram_sex.png", width="100%">
+</div>
+
+<h3><a name="gender_state"></a>Histogram of Average Tick Grade by Gender.</h3>
+
+<div class="fig figcenter fighighlight">
+  <img src="sex_state.png", width=800>
+</div>
+
+
+<h3><a name="hmap"></a>Heat Map of The Most Ticked Routes.</h3>
+
+<div class="fig figcenter fighighlight">
+  <iframe src="heatmap.html" style="border: 0; width:100%; height:500px;"></iframe>
+
+</div>
+
+
+
+
+</body>
+
+</html>
