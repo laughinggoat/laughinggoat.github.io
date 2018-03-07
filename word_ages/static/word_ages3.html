@@ -1,7 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="static/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'> -->
     <link rel="shortcut icon" href="static/goat_icon.jpg" type="image/x-icon">
 
     <style>
@@ -34,10 +34,10 @@
     var test = function(){console.log('hi')};
 
     var load = function(){
-      console.log('loaded');
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
           if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log('loaded');
             response = JSON.parse(xhttp.responseText)
             global_load = response
             var orwell_div = document.getElementById('orwell');
@@ -47,7 +47,7 @@
             sedaris_text = response[1]
             sedaris_div.innerHTML = format_para(sedaris_text, 2)
               }}
-            xhttp.open("GET", "http://0.0.0.0:5000/load", true)
+            xhttp.open("GET", "https://wordages.herokuapp.com/load", true)
             xhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
             xhttp.send();}
 
@@ -103,7 +103,7 @@
               complete(response)
               }}
 
-              xhttp.open("POST", "http://0.0.0.0:5000/convert", true);
+              xhttp.open("POST", "https://wordages.herokuapp.com/convert", true);
               var input = document.getElementById('textarea').value;
               xhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
               text = 'converttext=' + input;
