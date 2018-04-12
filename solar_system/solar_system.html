@@ -8451,15 +8451,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11233,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11676,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11730,14 +11730,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11785,7 +11785,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I recorded the location, velocity and mass for the 16 largest objects in the solar system: 
+<p>I recorded the location, velocity and mass for the 16 largest objects in the solar system:
 earth, moon, sun, mercury, venus, mars, jupiter and it's four largest moons (io, ganymede, europa, callisto),  saturn, uranus, neptune and its moon triton, and pluto.</p>
 <p>So let's import everything we'll need, and then get the initial state of our bodies at midnight on January 1st, 2018</p>
 
@@ -11842,7 +11842,7 @@ earth, moon, sun, mercury, venus, mars, jupiter and it's four largest moons (io,
 <span class="c1">#NASA uses numbers to identify planets and their moons.</span>
 <span class="n">planet_codes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">199</span><span class="p">,</span><span class="mi">299</span><span class="p">,</span><span class="mi">399</span><span class="p">,</span><span class="mi">301</span><span class="p">,</span><span class="mi">499</span><span class="p">,</span><span class="mi">599</span><span class="p">,</span><span class="mi">501</span><span class="p">,</span><span class="mi">502</span><span class="p">,</span><span class="mi">503</span><span class="p">,</span><span class="mi">504</span><span class="p">,</span><span class="mi">699</span><span class="p">,</span><span class="mi">799</span><span class="p">,</span><span class="mi">899</span><span class="p">,</span><span class="mi">801</span><span class="p">,</span><span class="mi">999</span><span class="p">]</span>
 
-<span class="n">planet_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sun&#39;</span><span class="p">,</span> <span class="s1">&#39;mercury&#39;</span><span class="p">,</span> <span class="s1">&#39;venus&#39;</span><span class="p">,</span><span class="s1">&#39;earth&#39;</span><span class="p">,</span> <span class="s1">&#39;moon&#39;</span><span class="p">,</span><span class="s1">&#39;mars&#39;</span><span class="p">,</span> <span class="s1">&#39;jupiter&#39;</span><span class="p">,</span> <span class="s1">&#39;io&#39;</span><span class="p">,</span> 
+<span class="n">planet_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sun&#39;</span><span class="p">,</span> <span class="s1">&#39;mercury&#39;</span><span class="p">,</span> <span class="s1">&#39;venus&#39;</span><span class="p">,</span><span class="s1">&#39;earth&#39;</span><span class="p">,</span> <span class="s1">&#39;moon&#39;</span><span class="p">,</span><span class="s1">&#39;mars&#39;</span><span class="p">,</span> <span class="s1">&#39;jupiter&#39;</span><span class="p">,</span> <span class="s1">&#39;io&#39;</span><span class="p">,</span>
                <span class="s1">&#39;europa&#39;</span><span class="p">,</span><span class="s1">&#39;ganymede&#39;</span><span class="p">,</span> <span class="s1">&#39;calisto&#39;</span><span class="p">,</span><span class="s1">&#39;saturn&#39;</span><span class="p">,</span> <span class="s1">&#39;uranus&#39;</span><span class="p">,</span> <span class="s1">&#39;neptune&#39;</span><span class="p">,</span> <span class="s1">&#39;triton&#39;</span><span class="p">,</span> <span class="s1">&#39;pluto&#39;</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">get_vectors</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
@@ -11884,7 +11884,7 @@ earth, moon, sun, mercury, venus, mars, jupiter and it's four largest moons (io,
 <span class="c1">## the horizons data is in AU and AU/d, so we&#39;ll convert to SI units. We&#39;ll also </span>
 <span class="c1">## add the planet masses, and combine the entire initial state into one list</span>
 
-<span class="k">def</span> <span class="nf">to_SI</span> <span class="p">(</span><span class="n">data</span><span class="p">):</span>  
+<span class="k">def</span> <span class="nf">to_SI</span> <span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="c1"># NASA data comes in AU/d</span>
     <span class="n">ndata</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:]</span>
     <span class="n">ndata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">AU</span>
@@ -11904,7 +11904,7 @@ earth, moon, sun, mercury, venus, mars, jupiter and it's four largest moons (io,
     <span class="n">body_initial</span> <span class="o">=</span> <span class="n">body_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">body_initial</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">planet_masses</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="n">initial_state</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">to_SI</span><span class="p">(</span><span class="n">body_initial</span><span class="p">))</span>
-    
+
 <span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">delta</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">-</span> <span class="n">t0</span>
 
@@ -11940,7 +11940,7 @@ earth, moon, sun, mercury, venus, mars, jupiter and it's four largest moons (io,
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;1yr_2018_01_01.p&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">total_state</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    
+
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;initial_2018_01_01.p&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">initial_state</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
@@ -12016,7 +12016,7 @@ earth, moon, sun, mercury, venus, mars, jupiter and it's four largest moons (io,
     <span class="n">planets</span> <span class="o">=</span> <span class="n">planet_separator</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">planet</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">planets</span><span class="p">):</span>
         <span class="c1">#for each body, calculate force due to gravity on it due to each other body</span>
-        <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="n">planet</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> 
+        <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="n">planet</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
         <span class="n">comp_accelerations</span> <span class="o">=</span> <span class="p">[</span><span class="n">component_acceleration</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span> <span class="n">other_planet</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">other_planet</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">other_planet</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">other_planet</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">other_planet</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">planets</span><span class="p">)</span> <span class="k">if</span> <span class="n">j</span> <span class="o">!=</span> <span class="n">i</span><span class="p">]</span>
         <span class="n">resultant_a</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">:</span> <span class="p">[</span><span class="n">a1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">a2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">a2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="n">a2</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="n">comp_accelerations</span><span class="p">)</span>
         <span class="n">deltas</span> <span class="o">+=</span> <span class="p">[</span><span class="n">planet</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">planet</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">planet</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">resultant_a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">resultant_a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">resultant_a</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">0</span><span class="p">]</span>
@@ -12110,7 +12110,7 @@ earth, moon, sun, mercury, venus, mars, jupiter and it's four largest moons (io,
 <span class="n">nasa_x</span> <span class="o">=</span> <span class="n">nasa_data</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">nasa_y</span> <span class="o">=</span> <span class="n">nasa_data</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">x_error</span> <span class="o">=</span> <span class="p">((</span><span class="n">calculated_x</span><span class="o">-</span><span class="n">nasa_x</span><span class="p">)</span><span class="o">/</span><span class="n">AU</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>  <span class="c1">#errors as a % of AU</span>
-<span class="n">y_error</span> <span class="o">=</span> <span class="p">((</span><span class="n">calculated_y</span><span class="o">-</span><span class="n">nasa_y</span><span class="p">)</span><span class="o">/</span><span class="n">AU</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>  
+<span class="n">y_error</span> <span class="o">=</span> <span class="p">((</span><span class="n">calculated_y</span><span class="o">-</span><span class="n">nasa_y</span><span class="p">)</span><span class="o">/</span><span class="n">AU</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
 <span class="nb">print</span> <span class="p">(</span><span class="n">x_error</span><span class="p">,</span> <span class="n">y_error</span><span class="p">)</span>
 </pre></div>
 
@@ -12174,7 +12174,7 @@ earth, moon, sun, mercury, venus, mars, jupiter and it's four largest moons (io,
 
 <span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
     <span class="n">earth_calc</span><span class="o">.</span><span class="n">set_data</span><span class="p">([],</span> <span class="p">[])</span>
-    <span class="n">earth_nasa</span><span class="o">.</span><span class="n">set_data</span><span class="p">([],</span> <span class="p">[])</span>    
+    <span class="n">earth_nasa</span><span class="o">.</span><span class="n">set_data</span><span class="p">([],</span> <span class="p">[])</span>
     <span class="k">return</span> <span class="n">earth_calc</span><span class="p">,</span> <span class="n">earth_nasa</span>
 
 <span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
@@ -12790,7 +12790,7 @@ AAABAAAAAExhdmY1Ny43MS4xMDA=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There're close enough that you can't tell there are two plots. Just for fun, let's go ahead and plot all the planets:</p>
+<p>They're close enough that you can't tell there are two plots. Just for fun, let's go ahead and plot all the planets:</p>
 
 </div>
 </div>
@@ -12834,7 +12834,7 @@ AAABAAAAAExhdmY1Ny43MS4xMDA=
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
 <span class="c1">#         ax.plot(nasa_data[i][0], nasa_data[i][1], linewidth=0.5)</span>
-        <span class="n">line</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="p">[:,</span><span class="n">i</span><span class="o">*</span><span class="mi">7</span><span class="p">],</span><span class="n">sol</span><span class="p">[:,</span><span class="n">i</span><span class="o">*</span><span class="mi">7</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">planet_names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>  
+        <span class="n">line</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="p">[:,</span><span class="n">i</span><span class="o">*</span><span class="mi">7</span><span class="p">],</span><span class="n">sol</span><span class="p">[:,</span><span class="n">i</span><span class="o">*</span><span class="mi">7</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">planet_names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
         <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">14</span><span class="p">]:</span>
             <span class="n">name</span> <span class="o">=</span> <span class="n">planet_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -12848,7 +12848,7 @@ AAABAAAAAExhdmY1Ny43MS4xMDA=
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
         <span class="n">planet</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([],[],</span><span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">planet_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="n">planets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">planet</span><span class="p">)</span>
-        
+
 <span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">planets</span>
 
@@ -13394,7 +13394,7 @@ AAAdZGF0YQAAAAEAAAAATGF2ZjU3LjcxLjEwMA==
   </div>
 </body>
 
- 
+
 
 
 </html>
